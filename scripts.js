@@ -83,6 +83,33 @@ function editCardContent(card, newTitle, newImageURL) {
     console.log("new card:", newTitle, "- html: ", card);
 }
 
+function showCards() {
+    const cardContainer = document.getElementById("card-container");
+    cardContainer.innerHTML = "";
+    const templateCard = document.querySelector(".card");
+
+    for (let i = 0; i < bugNames.length; i++) {
+        let title = bugNames[i];
+
+        // This part of the code doesn't scale very well! After you add your
+        // own data, you'll need to do something totally different here.
+        let imageURL = "";
+        if (i == 0) {
+            imageURL = PILLER_URL;
+        } else if (i == 1) {
+            imageURL = CURB_POSTER_URL;
+        } else if (i == 2) {
+            imageURL = EAST_LOS_HIGH_POSTER_URL;
+        }
+
+        const nextCard = templateCard.cloneNode(true); // Copy the template card
+        editCardContent(nextCard, title, imageURL); // Edit title and image
+        cardContainer.appendChild(nextCard); // Add new card to the container
+    }
+}
+
+
+
 // This calls the addCards() function when the page is first loaded
 document.addEventListener("DOMContentLoaded", showCards);
 

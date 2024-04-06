@@ -1,11 +1,3 @@
-
-:root{
-    --badge: "M10.499.471c.893-.628 2.108-.628 3.002 0 2.142 1.506 1.682 1.362 4.335 1.354
-    1.108-.004 2.091.682 2.429 1.696.813 2.427.527 2.052 2.679 3.544.899.623 1.275 1.733.928 2.744-.826 2.417-.83 1.953 0
-    4.381.347 1.011-.029 2.121-.928 2.744-2.151 1.492-1.866 1.117-2.679 3.544-.338 1.014-1.321 1.7-2.429 1.697-2.654-.009-2.193-.153-4.335
-    1.353-.894.629-2.109.629-3.002 0-2.143-1.505-1.682-1.363-4.335-1.353-1.108.003-2.091-.683-2.429-1.697-.812-2.43-.533-2.054-2.68-3.544-.898-.623-1.274-1.733-.927-2.744.827-2.418.83-1.953 0-4.381-.347-1.011.029-2.121.927-2.744 2.146-1.489 1.867-1.112 2.68-3.544.338-1.014
-    1.321-1.7 2.429-1.696 2.646.008 2.18.161 4.335-1.354";
-}
 html,
 body {
     margin: 0;
@@ -14,7 +6,8 @@ body {
 
 
 .main-header {
-    background-color: rgba(0, 100, 0, .3);
+    background-image: url(https://poppiecotton.com/cdn/shop/files/popsicle-pink.jpeg?v=1694016332);
+    /*background-color: rgba(0, 100, 0, .3); */
     padding-bottom: 10px;
 }
 
@@ -24,7 +17,20 @@ body {
     font-size: 8em;
     font-family: "Butterfly Kids";
     font-weight: normal;
-    color: white;
+    color: indianred;
+}
+
+.second-header{
+    padding-bottom: 10px;
+}
+img{
+    width: 100px;
+    height: 100px;
+}
+.welcome{
+    text-align: center;
+    font-family: "Gamja Flower";
+    font-size: 2em;
 }
 
 
@@ -35,6 +41,12 @@ body {
     font-weight: 400;
     font-style: normal;
 }
+.gamja-flower-regular {
+    font-family: "Gamja Flower", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 
 #card-container {
     display: flex;
@@ -42,18 +54,21 @@ body {
     margin: 20px;
 }
 
+/*
 .card {
+ */
     /*width: 200px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 5px;*/
+    margin: 5px;
     border-radius: 50%;
     width:500px;
     height:500px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 5px;
 }
+*/
 
 .card-content {
     padding: 20px;
@@ -71,11 +86,74 @@ body {
     height: auto;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*sticker proportion of website*/
+#sticker-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.theCard{
+    width: 300px;
+    height: 250px;
+    perspective: 800px;
+}
+
+.theCard:hover > .card{
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+.card{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+
+.front,
+.back{
+    height:100%;
+    width:100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front{
+    background-image: url(https://media.istockphoto.com/id/1323033814/vector/cute-green-smiling-caterpillar-on-white-background.jpg?s=612x612&w=0&k=20&c=rAxPauRsQ0VyppEflvA2GHJeHwIWQc4t9zfgmJzsIpo=);
+background-size: 300px;
+ }
+.back{
+    backround-color: "green";
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:5rem;
+}
+
+.second-footer{
+    padding-bottom: 10px;
+    margin-top: 40px;
+}
+
 .footer {
     display: flex;
     justify-content: center;
-    background-color: rgba(0, 0, 0, .3);
-    padding: 10px;
+
+    background-image: url(https://www.buildmat.com.au/cdn/shop/articles/synthetic-grass-maintenance-and-installation.jpg?v=1711723355);
+    padding: 30px;
 }
 
 button {
@@ -92,11 +170,6 @@ button {
     margin: 5px;
 }
 
-.frame{
-    height:300px;
-    width:300px;
-    position: relative;
-    clip-path: path(var(--badge));
-}
+
 
 
