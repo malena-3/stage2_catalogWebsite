@@ -24,49 +24,75 @@
  */
 
 
-const PILLER_URL = "https://png.pngtree.com/png-clipart/20220620/original/pngtree-green-bug-cartoon-cute-caterpillar-clipart-png-image_8137016.png";
+/*const PILLER_URL = "https://png.pngtree.com/png-clipart/20220620/original/pngtree-green-bug-cartoon-cute-caterpillar-clipart-png-image_8137016.png";
 const CURB_POSTER_URL = "https://m.media-amazon.com/images/M/MV5BZDY1ZGM4OGItMWMyNS00MDAyLWE2Y2MtZTFhMTU0MGI5ZDFlXkEyXkFqcGdeQXVyMDc5ODIzMw@@._V1_FMjpg_UX1000_.jpg";
 const EAST_LOS_HIGH_POSTER_URL = "https://static.wikia.nocookie.net/hulu/images/6/64/East_Los_High.jpg";
 
 // This is an array of strings (bug names)
-let bugNames = [
-    "Fresh Prince of Bel Air",
-    "Curb Your Enthusiasm",
-    "East Los High",
-    "Hello this is a test"
-];
+let greenTeamContract;
 
-
+*/
 // Your final submission should have much more data than this, and 
 // you should use more than just an array of strings to store it all.
 
-//this is a mal comment
-// This function adds bug stickers the page to display the data in the array
-function showCards() {
-    const cardContainer = document.getElementById("card-container");
-    cardContainer.innerHTML = "";
-    const templateCard = document.querySelector(".card");
-    
-    for (let i = 0; i < bugNames.length; i++) {
-        let title = bugNames[i];
+//Creating the GreenTeam Contract List
+var enterButton = document.getElementById("enter"); /*create the enter botton*/
+var input = document.getElementById("userInput");
+var ul = document.querySelector("ul");
+var item = document.getElementsByTagName("li");
 
-        // This part of the code doesn't scale very well! After you add your
-        // own data, you'll need to do something totally different here.
-        let imageURL = "";
-        if (i == 0) {
-            imageURL = PILLER_URL;
-        } else if (i == 1) {
-            imageURL = CURB_POSTER_URL;
-        } else if (i == 2) {
-            imageURL = EAST_LOS_HIGH_POSTER_URL;
-        }
+function inputLength(){
+    return input.value.length;
+}
+function listLength(){
+    return item.length;
+}
 
-        const nextCard = templateCard.cloneNode(true); // Copy the template card
-        editCardContent(nextCard, title, imageURL); // Edit title and image
-        cardContainer.appendChild(nextCard); // Add new card to the container
+function createMemberElement(){
+    var li = document.createElement("li");
+
+    li.appendChild(document.createTextNode(input.value)); //text from input -> li text
+    ul.appendChild(li); //adds li to ul
+    input.value = ""; //reset text input field
+
+    function crossOut() {
+        li.classList.toggle("done");
+    }
+
+    li.addEventListener("click", crossOut);
+
+    //add delete x
+    var deleteB = document.createElement("button");
+
+    deleteB.appendChild(document.createTextNode("X"));
+    li.appendChild(deleteB);
+    deleteB.addEventListener("click", deleteListItem);
+    //end of adding delete x
+
+    function deleteListItem(){
+        li.classList.add("delete")
     }
 }
 
+function addListAfterClick(){
+    if (inputLength() > 0) //if empty don't make new li
+    {createMemberElement();}
+}
+
+function addListAfterKeypress(event)
+{
+    if(inputLength() > 0 && event.which ===13) { //if "enter"/"return (13 is the enter key's keycode)
+        createMemberElement();
+    }
+}
+
+enterButton.addEventListener("click", addListAfterClick);
+input.addEventListener("keypress", addListAfterKeypress);
+
+//END OF CREATING MEMBER LIST (BY USER INPUT)
+
+
+/*
 function editCardContent(card, newTitle, newImageURL) {
     card.style.display = "block";
 
@@ -122,3 +148,4 @@ function removeLastCard() {
     titles.pop(); // Remove last item in titles array
     showCards(); // Call showCards again to refresh
 }
+*/

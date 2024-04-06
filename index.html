@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="style.css" />
     <script type="text/javascript" src="scripts.js"></script>
 
+    <script src="https://kit.fontawesome.com/93826d5b9a.js" crossorigin="anonymous"></script>
+
+
 </head>
 
 <body>
@@ -31,20 +34,61 @@
         </marquee>
     </header>
 
-    <div id="card-container">
-    </div>
+
     <div class="card" style="display: none;">
         <div class="card-content">
 
             <h2>TV Show Title</h2>
             <img src="" alt="TV Show Poster">
             <ul>
-                <li>Bullet Point 1</li>
-                <li>Bullet Point 2</li>
-                <li>Bullet Point 3</li>
+                <li>rule 1</li>
+                <li>rule 2</li>
+                <li>rule 3</li>
             </ul>
         </div>
     </div>
+
+    <body>
+    <div id="contract-container"> </div>
+    <div class="row">
+        <div class="intro col-12">
+            <h1>Member List</h1>
+            <div>
+                <div class="border1"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="helpText col-12">
+            <p id="first">Enter the members of your GreenTeam</p>
+            <p>Click the item to mark it as complete.</p>
+            <p>Click the "X" to remove the name from your list.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <input id="userInput" type="text"
+                   placeholder="New member..." maxlength="27">
+            <button id="enter">
+                <i class="fas fa-pencil-alt"></i></button>
+        </div>
+    </div>
+
+    <!-- empty list -->
+    <div class="row">
+        <div class="listMembers col-12">
+            <ul class="col-12 offset-0 col-sm-8 offset-sm-2"></ul>
+        </div>
+    </div>
+
+    </div>
+    <script type="text/javascript"
+            src="script_method3.js"></script>
+
+    </body>
+
 
     <div id="sticker-container">
     </div>
@@ -76,3 +120,4 @@
 </body>
 
 </html>
+
