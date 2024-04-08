@@ -4,7 +4,6 @@ body {
     padding: 0;
 }
 
-
 .main-header {
     background-image: url(https://poppiecotton.com/cdn/shop/files/popsicle-pink.jpeg?v=1694016332);
     padding-bottom: 10px;
@@ -33,7 +32,6 @@ img{
 }
 
 
-
 /*Section: Fonts*/
 .butterfly-kids-regular {
     font-family: "Butterfly Kids", cursive;
@@ -46,21 +44,24 @@ img{
     font-style: normal;
 }
 
+.greenTeamContract{
+    border: 2px solid saddlebrown}
+
 /*Section: Member list*/
 body{
-    /*background: white;*/
     text-align: center;
     font-family: "Gamja Flower";
 }
 .row{
     background: cornflowerblue;
+    margin: 3%;
 }
 .into{
     margin: 30px 0px;
     font-weight: bold;
 }
 h1{
-    color: floralwhite;
+    /*color: darkslateblue;*/
     text-transform: uppercase;
     font-weight: 800;
 }
@@ -69,11 +70,13 @@ p{
 }
 #first{
     margin-top:10px;
-    color: darkolivegreen;
+    color: floralwhite;
+    font-size: 25px;
 }
+
 #enter{
     border: none;
-    padding: 5px 25px;
+    padding: 5px 15px;
     border-radius: 5px;
     color: #04A1BF;
     background-color: #025F70;
@@ -82,19 +85,22 @@ p{
     -moz-transition: all 0.75s ease;
     -ms-transition: all 0.75s ease;
     font-weight: normal;
+
 }
+
 #enter:hover{
     background-color: #02798F;
     color: #FFCD5D;
 }
 ul{
     text-align: left;
-    margin-top:20px;
+    font-color: "blue";
+    margin-top:250px;
 }
 li{
     list-style: none;
     padding: 10px 20px;
-    color: #ffffff;
+    color: rebeccapurple;
     text-transform: capitalize;
     font-weight: 600;
     border: 2px solid #025f70;
@@ -111,6 +117,7 @@ li:hover{
     background: #76CFE0;
 }
 
+
 li > button{
     font-weight: normal;
     background: none;
@@ -119,6 +126,8 @@ li > button{
     color: #025f70;
     font-weight: 800;
 }
+
+
 input{
     border-radius: 5px;
     min-width: 65%;
@@ -134,43 +143,10 @@ input{
 }
 
 
-
 #contract-container {
     display: flex;
     justify-content: center;
     margin: 20px;
-}
-
-/*
-.card {
- */
-    /*width: 200px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 5px;
-    border-radius: 50%;
-    width:500px;
-    height:500px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 5px;
-}
-*/
-
-.card-content {
-    padding: 20px;
-    font-family: "Verdana";
-    color: #777;
-}
-
-.card-content h2 {
-    margin-top: 0;
-    font-size: 20px;
-}
-
-.card img {
-    width: 100%;
-    height: auto;
 }
 
 *{
@@ -179,18 +155,38 @@ input{
     box-sizing: border-box;
 }
 
-
-/*sticker proportion of website*/
-#sticker-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
+#memberList{
+    margin-top: 3px;
 }
 
-.theCard{
+
+#sticker-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+.theCard {
     width: 300px;
     height: 250px;
     perspective: 800px;
+    padding: 5px;
+
+    display: inline-block; /* Change from flex to inline-block */
+    margin: 10px;
+    position: relative; /* Enable positioning */
+}
+
+
+
+/* Example positioning for individual stickers */
+.theCard:nth-child(1) {
+    top: 350px;
+    left: 50px;
+}
+
+.theCard:nth-child(2) {
+    top: 100px;
+    left: 100px;
 }
 
 .theCard:hover > .card{
@@ -204,6 +200,7 @@ input{
     position: relative;
     transition: transform 1500ms;
     transform-style: preserve-3d;
+    left:35%;
 }
 
 .front,
@@ -217,11 +214,11 @@ input{
 }
 
 .front{
-    background-image: url(https://media.istockphoto.com/id/1323033814/vector/cute-green-smiling-caterpillar-on-white-background.jpg?s=612x612&w=0&k=20&c=rAxPauRsQ0VyppEflvA2GHJeHwIWQc4t9zfgmJzsIpo=);
-background-size: 300px;
- }
+    background-size: 300px;
+
+}
 .back{
-    backround-color: "green";
+    background-color: darkkhaki;
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
@@ -230,9 +227,10 @@ background-size: 300px;
     gap:5rem;
 }
 
+/*bottom portion of page*/
 .second-footer{
     padding-bottom: 10px;
-    margin-top: 40px;
+    margin-top: 80px;
 }
 
 .footer {
@@ -242,21 +240,4 @@ background-size: 300px;
     background-image: url(https://www.buildmat.com.au/cdn/shop/articles/synthetic-grass-maintenance-and-installation.jpg?v=1711723355);
     padding: 30px;
 }
-
-button {
-    text-align: center;
-    background-color: #666;
-    border: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    height: 40px;
-    border-radius: 10px;
-    color: white;
-    font-size: 22px;
-    cursor: pointer;
-    margin: 5px;
-}
-
-
-
 

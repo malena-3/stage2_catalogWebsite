@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 
-    <link rel ="stylesheet" type = "text/css" href=style.css">
+    <link rel ="stylesheet" type = "text/css" href="style.css">
     <title>The BB and B's | Home</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,9 +19,10 @@
 
     <script src="https://kit.fontawesome.com/93826d5b9a.js" crossorigin="anonymous"></script>
 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
-
 <body>
     <header class="main-header">
         <h1 class = "title"> The BB and B's</h1>
@@ -35,31 +36,21 @@
     </header>
 
 
-    <div class="card" style="display: none;">
-        <div class="card-content">
 
-            <h2>TV Show Title</h2>
-            <img src="" alt="TV Show Poster">
-            <ul>
-                <li>rule 1</li>
-                <li>rule 2</li>
-                <li>rule 3</li>
-            </ul>
-        </div>
-    </div>
-
-    <body>
     <div id="contract-container"> </div>
+
+        <div class="greenTeamContract">
+        <h1 style="color: hotpink">Green Team Contract</h1>
+            <p>These are the rules to be apart of the green team!</p>
+        </div>
+
+    <div class="testcontainer">
     <div class="row">
         <div class="intro col-12">
             <h1>Member List</h1>
-            <div>
                 <div class="border1"></div>
-            </div>
-        </div>
-    </div>
+                </div>
 
-    <div class="row">
         <div class="helpText col-12">
             <p id="first">Enter the members of your GreenTeam</p>
             <p>Click the item to mark it as complete.</p>
@@ -67,39 +58,37 @@
         </div>
     </div>
 
-    <div class="row">
+</div>
+
+
         <div class="col-12">
-            <input id="userInput" type="text"
-                   placeholder="New member..." maxlength="27">
-            <button id="enter">
-                <i class="fas fa-pencil-alt"></i></button>
+            <label for="userInput"></label><input id="userInput" type="text"
+                                                  placeholder="new member's name:" maxlength="27">
+            <button id="enter"><i class="fas fa-pencil-alt"></i></button>
         </div>
-    </div>
 
     <!-- empty list -->
-    <div class="row">
-        <div class="listMembers col-12">
-            <ul class="col-12 offset-0 col-sm-8 offset-sm-2"></ul>
+   <div class="row">
+        <div class="listItems col-12">
+            <ul id = "memberList" class="col-12 offset-0 col-sm-8 offset-sm-2">
+
+            </ul>
         </div>
     </div>
-
-    </div>
-    <script type="text/javascript"
-            src="script_method3.js"></script>
-
-    </body>
 
 
     <div id="sticker-container">
     </div>
     <div class="theCard">
+<!--
         <div class="card">
             <div class="front"></div>
             <div class="back">
                 <h1>back of card</h1>
                 <p>additional info</p>
             </div>
-        </div>
+
+        </div> -->
     </div>
 
 
@@ -109,15 +98,18 @@
         </marquee>
     </header>
 
-    <div class="footer">
-        <button onclick="quoteAlert();">
-            Get A Quote
-        </button>
-        <button onclick="removeLastCard();">
-            Remove A Card!
-        </button>
-    </div>
-</body>
+    <div class="footer"></div>
 
+<!--
+    <script type="text/javascript"
+            src="script_method3.js"></script>
+
+            <script src="scripts.js"></script>
+
+-->
+
+    <script src="scripts.js"></script>
+
+</body>
 </html>
 

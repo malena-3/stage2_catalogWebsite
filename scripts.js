@@ -1,44 +1,7 @@
-/**
- * Data Catalog Project Starter Code - SEA Stage 2
- *
- * This file is where you should be doing most of your work. You should
- * also make changes to the HTML and CSS files, but we want you to prioritize
- * demonstrating your understanding of data structures, and you'll do that
- * with the JavaScript code you write in this file.
- * 
- * The comments in this file are only to help you learn how the starter code
- * works. The instructions for the project are in the README. That said, here
- * are the three things you should do first to learn about the starter code:
- * - 1 - Change something small in index.html or style.css, then reload your 
- *    browser and make sure you can see that change. 
- * - 2 - On your browser, right click anywhere on the page and select
- *    "Inspect" to open the browser developer tools. Then, go to the "console"
- *    tab in the new window that opened up. This console is where you will see
- *    JavaScript errors and logs, which is extremely helpful for debugging.
- *    (These instructions assume you're using Chrome, opening developer tools
- *    may be different on other browsers. We suggest using Chrome.)
- * - 3 - Add another string to the titles array a few lines down. Reload your
- *    browser and observe what happens. You should see a fourth "card" appear
- *    with the string you added to the array, but a broken image.
- * 
- */
-
-
-/*const PILLER_URL = "https://png.pngtree.com/png-clipart/20220620/original/pngtree-green-bug-cartoon-cute-caterpillar-clipart-png-image_8137016.png";
-const CURB_POSTER_URL = "https://m.media-amazon.com/images/M/MV5BZDY1ZGM4OGItMWMyNS00MDAyLWE2Y2MtZTFhMTU0MGI5ZDFlXkEyXkFqcGdeQXVyMDc5ODIzMw@@._V1_FMjpg_UX1000_.jpg";
-const EAST_LOS_HIGH_POSTER_URL = "https://static.wikia.nocookie.net/hulu/images/6/64/East_Los_High.jpg";
-
-// This is an array of strings (bug names)
-let greenTeamContract;
-
-*/
-// Your final submission should have much more data than this, and 
-// you should use more than just an array of strings to store it all.
-
 //Creating the GreenTeam Contract List
-var enterButton = document.getElementById("enter"); /*create the enter botton*/
+var enterButton = document.getElementById("enter");
 var input = document.getElementById("userInput");
-var ul = document.querySelector("ul");
+var ul = document.querySelector(".listItems ul");
 var item = document.getElementsByTagName("li");
 
 function inputLength(){
@@ -50,7 +13,6 @@ function listLength(){
 
 function createMemberElement(){
     var li = document.createElement("li");
-
     li.appendChild(document.createTextNode(input.value)); //text from input -> li text
     ul.appendChild(li); //adds li to ul
     input.value = ""; //reset text input field
@@ -89,63 +51,73 @@ function addListAfterKeypress(event)
 enterButton.addEventListener("click", addListAfterClick);
 input.addEventListener("keypress", addListAfterKeypress);
 
+
 //END OF CREATING MEMBER LIST (BY USER INPUT)
 
+//start of making stickers
 
-/*
-function editCardContent(card, newTitle, newImageURL) {
-    card.style.display = "block";
+document.addEventListener('DOMContentLoaded', function() {
+    // Array of image URLs for the stickers
+    const stickerUrls = [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTojwuXQ8edtBKvcCwQxIiN_J0MIsPgsqHHpg&s",
+        "https://media.istockphoto.com/id/1323033814/vector/cute-green-smiling-caterpillar-on-white-background.jpg?s=612x612&w=0&k=20&c=rAxPauRsQ0VyppEflvA2GHJeHwIWQc4t9zfgmJzsIpo="
 
-    const cardHeader = card.querySelector("h2");
-    cardHeader.textContent = newTitle;
+        // Add more image URLs as needed
+    ];
+    const stickerContainer = document.getElementById('sticker-container');
 
-    const cardImage = card.querySelector("img");
-    cardImage.src = newImageURL;
-    cardImage.alt = newTitle + " Poster";
+    stickerUrls.forEach(function(url) {
+        const stickerDiv = document.createElement('div');
+        stickerDiv.classList.add('theCard');
 
-    // You can use console.log to help you debug!
-    // View the output by right clicking on your website,
-    // select "Inspect", then click on the "Console" tab
-    console.log("new card:", newTitle, "- html: ", card);
-}
+        const cardDiv = document.createElement('div');
+        cardDiv.classList.add('card');
 
-function showCards() {
-    const cardContainer = document.getElementById("card-container");
-    cardContainer.innerHTML = "";
-    const templateCard = document.querySelector(".card");
+        const frontDiv = document.createElement('div');
+        frontDiv.classList.add('front');
+        frontDiv.style.backgroundImage = `url(${url})`;
 
-    for (let i = 0; i < bugNames.length; i++) {
-        let title = bugNames[i];
+        const backDiv = document.createElement('div');
+        backDiv.classList.add('back');
+        backDiv.innerHTML = `
+            <h1>back of card</h1>
+            <p>additional info</p>
+        `;
 
-        // This part of the code doesn't scale very well! After you add your
-        // own data, you'll need to do something totally different here.
-        let imageURL = "";
-        if (i == 0) {
-            imageURL = PILLER_URL;
-        } else if (i == 1) {
-            imageURL = CURB_POSTER_URL;
-        } else if (i == 2) {
-            imageURL = EAST_LOS_HIGH_POSTER_URL;
-        }
+        cardDiv.appendChild(frontDiv);
+        cardDiv.appendChild(backDiv);
 
-        const nextCard = templateCard.cloneNode(true); // Copy the template card
-        editCardContent(nextCard, title, imageURL); // Edit title and image
-        cardContainer.appendChild(nextCard); // Add new card to the container
-    }
-}
-
+        stickerDiv.appendChild(cardDiv);
+        stickerContainer.appendChild(stickerDiv);
+    });
+});
+    /*
+    stickerUrls.forEach(url => {
+        const stickerDiv = document.createElement('div');
+        stickerDiv.classList.add('theCard');
 
 
-// This calls the addCards() function when the page is first loaded
-document.addEventListener("DOMContentLoaded", showCards);
+        const cardDiv = document.createElement('div');
+        cardDiv.classList.add('card');
 
-function quoteAlert() {
-    console.log("Button Clicked!")
-    alert("I guess I can kiss heaven goodbye, because it got to be a sin to look this good!");
-}
 
-function removeLastCard() {
-    titles.pop(); // Remove last item in titles array
-    showCards(); // Call showCards again to refresh
-}
+
+        const frontDiv = document.createElement('div');
+        frontDiv.classList.add('front');
+        frontDiv.style.backgroundImage = `url(${url})`;
+
+        const backDiv = document.createElement('div');
+        backDiv.classList.add('back');
+        backDiv.innerHTML = `
+            <h1>back of card</h1>
+            <p>additional info</p>
+        `;
+
+        cardDiv.appendChild(frontDiv);
+        cardDiv.appendChild(backDiv);
+
+        stickerDiv.appendChild(cardDiv);
+        stickerContainer.appendChild(stickerDiv);
+    });
+});
 */
