@@ -217,13 +217,11 @@ input{
     .ref::before {
         font-weight: bold;
         color: navy;
-        content: "Reference ";
+        content: "";
     }
-    /*
-    top: 100px;
-    right: 340px
-
-     */
+}
+.theCard:nth-child(3) {
+    top: 400px;
 }
 
 .theCard:hover > .card{
@@ -257,14 +255,16 @@ input{
 
 }
 .back{
-    background-color: darkkhaki;
+    //background-color: darkkhaki;
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap:5rem;
+    background-size: cover;
 }
+
 
 /*bottom portion of page*/
 .second-footer{
@@ -279,6 +279,12 @@ input{
     background-image: url(https://www.buildmat.com.au/cdn/shop/articles/synthetic-grass-maintenance-and-installation.jpg?v=1711723355);
     padding: 30px;
 }
+
+.infoCards
+{
+    width: 50%;
+}
+
 
 
 
