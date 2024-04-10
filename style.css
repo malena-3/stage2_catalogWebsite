@@ -74,7 +74,6 @@ body{
     background: cornflowerblue;
     margin: 2%;
     border-radius: 2rem;
-
 }
 .into{
     margin: 30px 0px;
@@ -118,7 +117,11 @@ ul{
 }
 ul.new{
     margin-top: 15px;
-    margin-left: 900px;
+    margin-left: 700px;
+}
+ul.new1{
+    margin-top: 30px;
+    margin-right: 900px;
 }
 li.name{
     border: none;
@@ -128,9 +131,10 @@ li.name{
 padding: 0px 0px;
 }
 li.new{
-    background: lightgoldenrodyellow;
-    border: 2px solid orangered;
-    color: orange;
+    background: lavender;
+    border: 2px solid mediumpurple;
+    color: rebeccapurple;
+    width: 450px;
 }
 li.name:hover{
     background: lavender ;
@@ -208,7 +212,7 @@ input{
     margin: 20px;
 }
 .theCard {
-    width: 600px;
+    width: 550px;
     height: 350px;
 
     /*
@@ -226,17 +230,12 @@ input{
 
 
 /* Example positioning for individual stickers */
-.theCard:nth-child(1) {
 
-    top: 200px;
-    bottom: 350px;
-    left: 725px;
-
-}
-
-.theCard:nth-child(2) { /*caterpillar*/
-    bottom: 20px;
-    left: 100px;
+.theCard:nth-child(2) {
+    bottom: 270px;
+   /* bottom: 260px;
+    top: 600px;
+    left: 100px;*/
     .ref::before {
         font-weight: bold;
         color: navy;
@@ -244,7 +243,12 @@ input{
     }
 }
 .theCard:nth-child(3) {
-    bottom: 50px;
+    top: 100px;
+    right: 570px;
+    /*left: 250px;*/
+}
+.theCard:nth-child(4) {
+    top: 150px;
 }
 
 .theCard:hover > .card{
