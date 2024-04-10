@@ -177,7 +177,7 @@ li > button{
     color: #025f70;
     font-weight: 800;
 }
-#colorButton{
+.colorButton{
     border: none;
     border-radius: 1em;
     background: white;
@@ -186,7 +186,7 @@ li > button{
     font-family: "Gamja Flower", sans-serif;
     padding: 0px 0px;
 }
-#colorButton.clicked{
+.colorButton.clicked{
     background-color: #adc7b1;
 }
 
@@ -244,34 +244,28 @@ input{
 /* Example positioning for individual stickers */
 
 .theCard:nth-child(2) {
-    bottom: 2925px;
-   /* bottom: 270px;*/
-
-    .ref::before {
-        font-weight: bold;
-        color: navy;
-        content: "";
-    }
+    bottom: 3715px;
+    left: 100px;
 }
 .theCard:nth-child(3) {
-    bottom: 2500px;
-    right: 570px;
-    /*left: 250px;*/
+    bottom: 3090px;
+    right: 450px;
 }
 .theCard:nth-child(4) {
-    bottom: 1150px;
+    bottom: 2800px;
+    left: 100px;
 }
 .theCard:nth-child(5) {
-    bottom: 612px;
-    right: 570px;
+    bottom: 2155px;
+    right: 450px;
 }
 .theCard:nth-child(6) {
-    bottom: 612px;
-    right: 570px;
+    bottom: 1800px;
+    left: 100px;
 }
 .theCard:nth-child(7) {
-    bottom: 612px;
-    right: 570px;
+    bottom: 1100px;
+    right: 450px;
 }
 
 .theCard:hover > .card{
@@ -319,7 +313,7 @@ input{
 /*bottom portion of page*/
 .second-footer{
     padding-bottom: 10px;
-    margin-top: 80px;
+    margin-top: 0px;
 }
 
 .footer {
@@ -328,11 +322,6 @@ input{
 
     background-image: url(https://www.buildmat.com.au/cdn/shop/articles/synthetic-grass-maintenance-and-installation.jpg?v=1711723355);
     padding: 30px;
-}
-
-.infoCards
-{
-    width: 50%;
 }
 
 

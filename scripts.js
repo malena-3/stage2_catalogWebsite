@@ -81,10 +81,15 @@ window.addEventListener('beforeunload', function(){
 });
 //END OF CREATING MEMBER LIST (BY USER INPUT)
 
-
 //set button
-document.getElementById('colorButton').addEventListener('click',function(){
-    this.classList.toggle('clicked');
+document.addEventListener("DOMContentLoaded", function() {
+    var buttons = document.querySelectorAll('.colorButton');
+
+    buttons.forEach(function (button) {
+        button.addEventListener('click', function() {
+            button.classList.toggle('clicked');
+        });
+    });
 });
 
 //start of making stickers
