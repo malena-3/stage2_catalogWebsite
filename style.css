@@ -237,7 +237,7 @@ input{
 /* Example positioning for individual stickers */
 
 .theCard:nth-child(2) {
-    bottom: 1300px;
+    bottom: 1850px;
    /* bottom: 270px;*/
 
     .ref::before {
@@ -247,12 +247,16 @@ input{
     }
 }
 .theCard:nth-child(3) {
-    bottom: 775px;
+    bottom: 1318px;
     right: 570px;
     /*left: 250px;*/
 }
 .theCard:nth-child(4) {
-    bottom: 600px;
+    bottom: 1150px;
+}
+.theCard:nth-child(5) {
+    bottom: 612px;
+    right: 570px;
 }
 
 .theCard:hover > .card{
