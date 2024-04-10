@@ -119,10 +119,6 @@ ul.new{
     margin-top: 15px;
     margin-left: 700px;
 }
-ul.new1{
-    margin-top: 30px;
-    margin-right: 900px;
-}
 li.name{
     border: none;
     background: white;
@@ -136,11 +132,20 @@ li.new{
     color: rebeccapurple;
     width: 450px;
 }
+li.blank{
+    background: white;
+    border: 2px solid white;
+    color: white;
+    height: 300px;
+}
 li.name:hover{
     background: lavender ;
 }
 li.new:hover{
     background: lightgoldenrodyellow;}
+li.blank:hover{
+background: white;
+}
 
 li{
     font-size: 20px;
@@ -232,10 +237,9 @@ input{
 /* Example positioning for individual stickers */
 
 .theCard:nth-child(2) {
-    bottom: 270px;
-   /* bottom: 260px;
-    top: 600px;
-    left: 100px;*/
+    bottom: 1300px;
+   /* bottom: 270px;*/
+
     .ref::before {
         font-weight: bold;
         color: navy;
@@ -243,12 +247,12 @@ input{
     }
 }
 .theCard:nth-child(3) {
-    top: 100px;
+    bottom: 775px;
     right: 570px;
     /*left: 250px;*/
 }
 .theCard:nth-child(4) {
-    top: 150px;
+    bottom: 600px;
 }
 
 .theCard:hover > .card{
