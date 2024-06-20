@@ -46,10 +46,6 @@ body {
     font-style: normal;
 }
 
-.greenTeamContract{
-
-}
-
 .greenTeamRules{
     text-align: center;
     border-radius: 15px 50px 30px;
@@ -112,7 +108,6 @@ p{
 }
 ul{
     text-align: left;
-    font-color: "blue";
     margin-top:250px;
 }
 ul.new{
@@ -226,6 +221,7 @@ input{
     display: flex;
     flex-wrap: wrap;
     margin: 20px;
+    align-content: left;
 }
 .theCard {
     width: 550px;
@@ -233,10 +229,12 @@ input{
 
     perspective: 800px;
     padding: 5px;
+    padding-left: 150px;
 
     display: inline-block; /* Change from flex to inline-block */
     margin: 10px;
-    position: relative; /* Enable positioning */
+    position: static; /* Enable positioning */
+
 }
 
 
@@ -244,28 +242,28 @@ input{
 /* Example positioning for individual stickers */
 
 .theCard:nth-child(2) {
-    bottom: 3715px;
-    left: 100px;
+    margin-top: -3700px;
 }
 .theCard:nth-child(3) {
-    bottom: 3090px;
-    right: 450px;
+    margin-top: -3050px;
+    margin-left: -560px;
 }
 .theCard:nth-child(4) {
-    bottom: 2800px;
-    left: 100px;
+    margin-top: -2400px;
+    margin-left: -560px;
 }
 .theCard:nth-child(5) {
-    bottom: 2155px;
-    right: 450px;
+    margin-top: -1750px;
+    margin-left: -560px;
 }
 .theCard:nth-child(6) {
-    bottom: 1800px;
-    left: 100px;
+    margin-top: -1050px;
+    margin-left: -560px;
+
 }
 .theCard:nth-child(7) {
-    bottom: 1100px;
-    right: 450px;
+    margin-top: -400px;
+    margin-left: -560px;
 }
 
 .theCard:hover > .card{
@@ -279,7 +277,7 @@ input{
     /*position: relative;*/
     transition: transform 1500ms;
     transform-style: preserve-3d;
-    left:35%;
+    left:10%;
 }
 
 .front,
@@ -299,7 +297,7 @@ input{
 
 }
 .back{
-    //background-color: darkkhaki;
+    background-color: darkkhaki;
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
