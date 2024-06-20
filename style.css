@@ -250,6 +250,7 @@ input{
 .theCard:nth-child(3) {
     bottom: 3090px;
     right: 450px;
+    left: 100px;
 }
 .theCard:nth-child(4) {
     bottom: 2800px;
@@ -258,6 +259,7 @@ input{
 .theCard:nth-child(5) {
     bottom: 2155px;
     right: 450px;
+    left: 100px;
 }
 .theCard:nth-child(6) {
     bottom: 1800px;
@@ -266,6 +268,7 @@ input{
 .theCard:nth-child(7) {
     bottom: 1100px;
     right: 450px;
+    left: 100px;
 }
 
 .theCard:hover > .card{
